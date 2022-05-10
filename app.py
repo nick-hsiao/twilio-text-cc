@@ -1,7 +1,10 @@
 from flask import Flask, Response, request
 from twilio import twiml
+import os
 
 app = Flask(__name__)
+
+print(os.environ)
 
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
