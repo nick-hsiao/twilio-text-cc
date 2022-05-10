@@ -9,7 +9,6 @@ account_sid = os.environ.get('TWILIO_ID')
 auth_token  = os.environ.get('TWILIO_AUTH')
 client = Client(account_sid, auth_token)
 
-
 @app.route("/sms", methods=['GET', 'POST'])
 def sms_reply():
     resp = MessagingResponse()
