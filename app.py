@@ -21,7 +21,7 @@ def sms_reply():
 def forward_sms(msg):
     
     for number in number_list:
-        print(number)
+
         client.messages.create(
         to=number, 
         from_=os.environ.get('TWILIO_NUMBER'),
